@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';//modulo responsable para habilitar el sistema de enrutamiento.
 import { TabsPage } from './tabs.page';
 
+// const: declarar una constante, lo que significa que el valor de esta variable no puede ser reasignado.
+//Routes: es el tipo de dato que debe tener routes. Es un tipo definido en Angular que corresponde a un array de objetos Route (definido en @angular/router).
 const routes: Routes = [
   {
     //tabs: ruta principal http://tudominio.com/tabs, caragara el componente "TabsPage"
@@ -39,6 +41,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
+  //importa modulos para q el modulo ngmodule funcione
   imports: [RouterModule.forChild(routes)],
 })
 export class TabsPageRoutingModule {}

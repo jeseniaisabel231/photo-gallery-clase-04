@@ -7,6 +7,24 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
+  resultado: string = '';
+
   constructor() {}
+
+  append(symbol: string) {
+    this.resultado += symbol;
+  }
+
+  clear() {
+    this.resultado = '';
+  }
+
+  calculate() {
+    try {
+      this.resultado = eval(this.resultado);
+    } catch (e) {
+      this.resultado = 'Error';
+    }
+  }
 
 }
