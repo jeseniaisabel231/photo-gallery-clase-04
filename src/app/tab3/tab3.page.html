@@ -18,17 +18,21 @@
       <ion-row>
         <ion-col>
           <ion-item>
+            <!--readonly:atributo significa que el campo de entrada es solo lectura-->
             <ion-input id="respuesta" readonly [(ngModel)]="resultado"></ion-input>
+            <!--Si cambias el valor de resultado en el código TypeScript, el valor que se muestra en el campo de entrada se actualiza automáticamente. -->
           </ion-item>
         </ion-col>
       </ion-row>
 
       <ion-row>
         <ion-col>
+          <!--expand="block" se utiliza para que el botón se expanda y ocupe todo el ancho de su contenedor (la columna).-->
           <ion-button expand="block" (click)="append('7')">7</ion-button>
         </ion-col>
         <ion-col>
           <ion-button expand="block" (click)="append('8')">8</ion-button>
+          <!--Al hacer clic en el botón, se ejecutará una función llamada append que está definida en el archivo TypeScript del componente-->
         </ion-col>
         <ion-col>
           <ion-button expand="block" (click)="append('9')">9</ion-button>
